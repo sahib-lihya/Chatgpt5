@@ -18,6 +18,38 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.logo.microphone {  /*  TODO: add light-dark theme preference compatibility to this and input-container components (see index.css) */
+  margin-right: 10px;
+  cursor: pointer;
+}
+.logo.microphone:hover {
+  filter: drop-shadow(0 0 2em #535bf2);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #333; /* dark background */
+  padding: 5px;
+  border-radius: 5px;
+}
+.input-container textarea {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px;
+  font-size: 2em;
+  resize: none; /* prevent resizing */
+  height: 100%;
+  line-height: 1.5; /* line spacing */
+  overflow-y: auto;
+}
+.input-container input::placeholder {
+  color: #ccc;  /* placeholder text color */
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

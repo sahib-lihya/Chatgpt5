@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import reactLogo from './assets/react.svg';
+import micLogo from './assets/microphone.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
@@ -13,6 +14,11 @@ export default function App() {
             <FadeRegion>
                 <h1 style={{fontSize: '10em'}}>Deepen your connection with the Qur&apos;an</h1>
             </FadeRegion>
+
+            <div className="input-container">
+                <img src={micLogo} className="logo microphone" alt="Microphone"/>
+                <textarea placeholder="Speak or type your scenario..."/>
+            </div>
 
             <div>
                 <a href="https://vitejs.dev" target="_blank">
