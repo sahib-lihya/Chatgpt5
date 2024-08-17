@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import PropTypes from "prop-types";
+import './FadeRegion.css'
 
 // Custom hook to use Intersection FadeRegion
 function FadeRegion({children, threshold = 1, rootMargin = '10px'}) {
@@ -10,8 +11,8 @@ function FadeRegion({children, threshold = 1, rootMargin = '10px'}) {
         const observer = new IntersectionObserver(([entry]) => {
             setVisible(entry.isIntersecting);
         }, {
-            threshold,
-            rootMargin, //shorthand
+            threshold: threshold,
+            rootMargin: rootMargin //shorthand
         });
 
         const _ref = ref.current;

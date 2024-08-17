@@ -10,18 +10,6 @@ export default function App() {
 
     return (
         <>
-            <FadeRegion style={{height: '15000px'}}>
-                <h1>text fade test</h1>
-            </FadeRegion>
-            <FadeRegion>
-                <h1 style={{fontSize: '5em'}}>Deepen your connection with the Qur&apos;an</h1>
-            </FadeRegion>
-            <FadeRegion>
-                <h1 style={{fontSize: '10em'}}>Deepen your connection with the Qur&apos;an</h1>
-            </FadeRegion>
-            <FadeRegion>
-                <h1 style={{fontSize: '5em'}}>Deepen your connection with the Qur&apos;an</h1>
-            </FadeRegion>
             <FadeRegion>
                 <h1 style={{fontSize: '10em'}}>Deepen your connection with the Qur&apos;an</h1>
             </FadeRegion>
