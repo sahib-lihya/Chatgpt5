@@ -1,0 +1,10 @@
+.fade-region {
+    opacity: 0;
+    transform: translateX(2em);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-region.in {
+    opacity: 1;
+    transform: translateX(0);
+}
