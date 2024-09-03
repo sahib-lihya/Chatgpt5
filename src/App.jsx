@@ -1,10 +1,14 @@
 import {useState} from 'react';
+
 import reactLogo from './assets/react.svg';
 import micLogo from './assets/microphone.svg';
 import viteLogo from '/vite.svg';
+
 import './App.css';
+import './components/AppHub/AppHub.css';
 
 import FadeRegion from './components/FadeRegion/FadeRegion.jsx';
+import AppHub from './components/AppHub/AppHub.jsx';
 
 export default function App() {
     const [count, setCount] = useState(0);
@@ -12,8 +16,10 @@ export default function App() {
     return (
         <>
             <FadeRegion>
-                <h1 style={{fontSize: '10em'}}>Deepen your connection with the Qur&apos;an</h1>
+                <h1 style={{fontSize: '5em'}}>Deepen your connection with the Qur&apos;an</h1>
             </FadeRegion>
+
+            <AppHub/>
 
             <div className="input-container">
                 <img src={micLogo} className="logo microphone" alt="Microphone"/>

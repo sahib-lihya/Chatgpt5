@@ -1,7 +1,7 @@
 .fade-region {
     opacity: 0;
     transform: translateX(2em);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .fade-region.in {
