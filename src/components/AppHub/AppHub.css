@@ -49,13 +49,13 @@
     flex-wrap: wrap; /* Allows items to wrap onto the next line */
     justify-content: center; /* Centers items horizontally */
     align-items: center; /* Centers items vertically within the container */
-    gap: 1.5%; /* Adds space between items */
+    gap: 5%; /* Adds space between items */
 }
 
 /* Individual buttons */
 .app-button {
     width: 30%; /* Default width */
-    height: 30%; /* Default height */
+    height: 25%; /* Default height */
     background-color: #689686;
     border-radius: 8px;
 
@@ -69,7 +69,7 @@
 /* Styles for larger buttons */
 .app-button.large {
     width: 30%; /* Adjust the width as needed */
-    height: 30%; /* Adjust the height as needed */
+    height: 25%; /* Adjust the height as needed */
 }
 
 /* Styles for horizontally oriented buttons */

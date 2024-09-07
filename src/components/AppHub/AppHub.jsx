@@ -64,7 +64,7 @@ import './AppHub.css';
 const sizes = {
     '': .5,
     'large': .5,
-    'horizontal': .5
+    'horizontal': 1
 };
 
 function pick(selection = sizes) {
@@ -87,7 +87,7 @@ function pick(selection = sizes) {
 export default function AppHub() {
     return (
         <div className="app-hub">
-            {Array.from({ length: 6 }).map((style, i) => (
+            {Array.from({ length: 5 }).map((style, i) => (
                 <button
                     key={i}
                     className={`app-button ${pick()}`}
