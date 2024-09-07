@@ -28,33 +28,32 @@ function pick(selection = sizes) {
 }
 
 export default function AppHub() {
-    const isotopeRef = useRef(null);
+    const isotope = useRef();
 
     useEffect(() => {
-        new Isotope(isotopeRef.current, {
-            layoutMode: 'packery',
-            percentPosition: true,
+        isotope.current = new Isotope('.app-hub', {
             itemSelector: '.app-button',
+            layoutMode: 'packery',
             packery: {
                 //columnWidth: '.column-sizer',
-                //gutter: '.gutter-sizer'
-            }
+                gutter: '.gutter-sizer',
+            },
+            //percentPosition: true
         });
     }, []);
 
     return (
-      <div
-          className="app-hub"
-          ref={isotopeRef}
-      >
-          {Array.from({ length: 15 }).map((style, i) => (
-              <div
-                  key={i}
-                  className={`app-button ${pick()}`}
-              >
-                  app {i + 1}
-              </div>
-          ))}
-      </div>
+        <div className='app-hub'>
+            <div className='column-sizer'></div>
+            <div className='gutter-sizer'></div>
+            {Array.from({ length: 5 }).map((style, i) => (
+                <div
+                    key={i}
+                    className={`app-button ${pick()}`}
+                >
+                    app {i + 1}
+                </div>
+            ))}
+        </div>
     );
 }
