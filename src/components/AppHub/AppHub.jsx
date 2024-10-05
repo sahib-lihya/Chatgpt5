@@ -1,68 +1,11 @@
-// import {useEffect, useRef} from 'react';
-// import Isotope from 'isotope-layout';
-// import 'isotope-packery';
-//
-// import './AppHub.css';
-//
-// const sizes = {
-//     '': 1,
-//     'large': .1,
-//     'horizontal': .5
-// };
-//
-// function pick(selection = sizes) {
-//     let threshold = 0;
-//
-//     for (const [, weight] of Object.entries(selection))
-//         threshold += weight;
-//
-//     const dice = Math.random() * threshold;
-//
-//     threshold = 0;
-//
-//     for (const [item, weight] of Object.entries(selection)) {
-//         threshold += weight;
-//         if (threshold > dice)
-//             return item;
-//     }
-// }
-//
-// export default function AppHub() {
-//     // const isotopeRef = useRef(null);
-//
-//     // useEffect(() => {
-//     //     new Isotope(isotopeRef.current, {
-//     //         layoutMode: 'packery',
-//     //         percentPosition: true,
-//     //         itemSelector: '.app-button',
-//     //         packery: {
-//     //             //columnWidth: '.column-sizer',
-//     //             //gutter: '.gutter-sizer'
-//     //         }
-//     //     });
-//     // }, []);
-//
-//     return (
-//       <div
-//           className="app-hub"
-//           // ref={isotopeRef}
-//       >
-//           {Array.from({ length: 9 }).map((style, i) => (
-//               <div
-//                   key={i}
-//                   className={`app-button ${pick()}`}
-//               >
-//                   app {i + 1}
-//               </div>
-//           ))}
-//       </div>
-//     );
-// }
+import {useEffect, useRef} from 'react';
+import Isotope from 'isotope-layout';
+import 'isotope-packery';
 
 import './AppHub.css';
 
 const sizes = {
-    '': .5,
+    '': 1,
     'large': .5,
     'horizontal': .5
 };
@@ -85,16 +28,31 @@ function pick(selection = sizes) {
 }
 
 export default function AppHub() {
+    const isotope = useRef();
+
+    useEffect(() => {
+        isotope.current = new Isotope('.app-hub', {
+            itemSelector: '.app-button',
+            layoutMode: 'packery',
+            packery: {
+                //columnWidth: '.column-sizer',
+                gutter: '.gutter-sizer',
+            },
+            //percentPosition: true
+        });
+    }, []);
+
     return (
-        <div className="app-hub">
-            {Array.from({ length: 6 }).map((style, i) => (
-                <button
+        <div className='app-hub'>
+            <div className='column-sizer'></div>
+            <div className='gutter-sizer'></div>
+            {Array.from({ length: 5 }).map((style, i) => (
+                <div
                     key={i}
                     className={`app-button ${pick()}`}
-
                 >
                     app {i + 1}
-                </button>
+                </div>
             ))}
         </div>
     );
