@@ -1,88 +1,35 @@
-/*.app-hub {*/
-/*    aspect-ratio: 1;*/
-/*    width: 70vw;*/
-/*    height: 70vh;*/
-
-/*    background-color: #8c2b2b;*/
-/*    border-radius: 16px;*/
-/*}*/
-/*.app-hub:after {*/
-/*    content: '';*/
-/*    display: block;*/
-/*    clear: both;*/
-/*}*/
-
-/*.app-button {*/
-/*    float: none;*/
-/*    margin: 1.5%;*/
-/*    width: 25%;*/
-/*    height: 25%;*/
-/*    background-color: #689686;*/
-/*    border-radius: 8px;*/
-/*}*/
-/*.app-button.large {*/
-/*    width: 25%;*/
-/*    height: 25%*/
-/*}*/
-/*.app-button.horizontal {*/
-/*    width: 25%;*/
-/*}*/
-
-/*.column-sizer {*/
-/*    width: 8%;*/
-/*}*/
-/*.gutter-sizer {*/
-/*    width: 5%;*/
-/*}*/
-
-
-/* Container for the buttons */
 .app-hub {
     aspect-ratio: 1;
-    width: 80vw;
-    height: 80vh;
+    width: 75vw;
+    height: 90vh;
 
-    background-color: #8c2b2b;
+    background-color: #444;
     border-radius: 16px;
-
-    display: flex; /* Enables Flexbox */
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically within the container */
-    gap: 1.5%; /* Adds space between items */
+}
+.app-hub:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
-/* Individual buttons */
 .app-button {
-    width: 30%; /* Default width */
-    height: 30%; /* Default height */
-    background-color: #689686;
+    float: left;
+    width: 8%;
+    height: 8%;
+    background-color: #666;
     border-radius: 8px;
-
-    display: flex; /* Centers content inside the button */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    text-align: center; /* Ensures text is centered */
-    color: white; /* Optional: Text color */
 }
-
-/* Styles for larger buttons */
 .app-button.large {
-    width: 30%; /* Adjust the width as needed */
-    height: 30%; /* Adjust the height as needed */
+    width: 18%;
+    height: 18%
 }
-
-/* Styles for horizontally oriented buttons */
 .app-button.horizontal {
-    width: 90%; /* Adjust the width for horizontal buttons */
-    height: 35%; /* Keep height consistent */
+    width: 18%;
 }
 
-/* Sizers for potential future use */
 .column-sizer {
-    width: 8%; /* Not needed with Flexbox, but kept for reference */
+    width: 8%;
 }
-
 .gutter-sizer {
-    width: 5%; /* Not needed with Flexbox, but kept for reference */
+    width: 2%;
 }
