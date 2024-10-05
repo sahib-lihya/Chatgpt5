@@ -15,9 +15,11 @@ export default function App() {
 
     return (
         <>
-            <FadeRegion>
-                <h1 style={{fontSize: '5em'}}>Deepen your connection with the Qur&apos;an</h1>
-            </FadeRegion>
+            <div className='background book'>
+                <FadeRegion>
+                    <h1 style={{fontSize: '5em'}}>Deepen your connection with the Qur&apos;an</h1>
+                </FadeRegion>
+            </div>
 
             <AppHub/>
 
